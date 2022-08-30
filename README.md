@@ -161,7 +161,7 @@ db.setSync('user3', {
   roles: ['user', 'admin']
 });
 
-db.findOne({
+db.findMany({
   where: {
     name: 'John',
     roles: ['user']
@@ -289,9 +289,9 @@ db.ifNoExists('random-key', () => {
 Returns a Promise
 ```js
 db.transaction(() => {
-  const value = db.get('number');
+  let value = db.get('number');
   value += 1;
-  db.setSync(value);
+  db.setSync('number', value);
   return true;// succeded
 });
 ```
@@ -342,8 +342,8 @@ Returns a boolean
 ```js
 db.setSync('custom-key', 'custom-value');
 
-console.log( doesExist('custom-key') );// true
-console.log( doesExist('random-key') );// false
+console.log( db.doesExist('custom-key') );// true
+console.log( db.doesExist('random-key') );// false
 ```
 
 ### getBinary(String key)

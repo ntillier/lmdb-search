@@ -1,6 +1,6 @@
 {
   "name": "lmdb-search",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple and efficient LMDB encrypted interface, with some search functions.",
   "main": "index.js",
   "type": "module",
