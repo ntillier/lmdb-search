@@ -1,0 +1,21 @@
+{
+  "name": "lmdb-search",
+  "version": "1.0.0",
+  "description": "A simple and efficient LMDB encrypted interface, with some search functions.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": ["LMDB", "search", "database", "storage", "key-value", "encrypted"],
+  "author": "Nathan Tillier",
+  "license": "ISC",
+  "dependencies": {
+    "cbor-x": "^1.4.0",
+    "lmdb": "^2.5.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ntillier/Replit-s-graphql-module-Node.js"
+  }
+}
